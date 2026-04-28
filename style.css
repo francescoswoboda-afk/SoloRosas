@@ -1,0 +1,350 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f7f4;
+    color: #333;
+}
+
+/* HOME PAGE STYLES */
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+    background: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
+    position: relative;
+    z-index: 0;
+}
+
+.home-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.brand-name {
+    font-size: 3.8rem;
+    font-weight: 300;
+    letter-spacing: 0.45rem;
+    line-height: 0.95;
+    color: #333;
+    text-align: right;
+    font-family: 'Georgia', serif;
+    word-spacing: 9999px;
+}
+
+.home-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.home-rose {
+    max-width: 100%;
+    width: 600px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.home-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    list-style: none;
+    text-align: left;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 0.08rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid #d4b896;
+    padding-bottom: 8px;
+    display: block;
+    font-family: 'Georgia', serif;
+}
+
+.nav-link:hover {
+    color: #333;
+    border-bottom: 1px solid #a67c52;
+}
+
+/* COLLECTION PAGE STYLES */
+
+.collection-page {
+    min-height: 100vh;
+    background-color: #f9f7f4;
+}
+
+/* Rose Navigation Bar */
+.rose-navbar {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e8e3dd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px 1fr 300px;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sr {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a67c52;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.1rem;
+}
+
+.solo-rosas {
+    font-size: 0.7rem;
+    color: #999;
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+}
+
+.rose-stem-nav {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.navbar-menu a {
+    font-size: 0.9rem;
+    color: #a67c52;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.navbar-menu a:hover {
+    color: #8b6441;
+    border-bottom: 2px solid #a67c52;
+}
+
+/* Collection Section */
+.collection-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.collection-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-label {
+    font-size: 0.9rem;
+    color: #a67c52;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.collection-header h2 {
+    font-size: 3.5rem;
+    font-family: 'Georgia', serif;
+    color: #2c2c2c;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+    color: #a67c52;
+}
+
+.collection-description {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+}
+
+/* Roses Grid */
+.roses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.rose-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.rose-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.rose-name {
+    font-size: 1.3rem;
+    font-family: 'Georgia', serif;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.rose-label {
+    font-size: 0.8rem;
+    color: #a67c52;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .home-left {
+        left: 5px !important;
+    }
+
+    .home-right {
+        right: 5px !important;
+    }
+
+    .brand-name {
+        font-size: 2.5rem;
+    }
+
+    .roses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .navbar-menu {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 2rem;
+    }
+
+    .collection-header h2 {
+        font-size: 2rem;
+    }
+
+    .roses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+    }
+
+    .rose-image {
+        height: 250px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a67c52;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b6441;
+}

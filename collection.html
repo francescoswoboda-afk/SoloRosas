@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection - Solo Rosas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="collection-page">
+        <!-- Rose Stem Navigation Bar -->
+        <nav class="rose-navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo">
+                    <div class="logo-text">
+                        <div class="sr">SR</div>
+                        <div class="solo-rosas">SOLO ROSAS</div>
+                    </div>
+                </a>
+                <div class="navbar-center">
+                    <img src="assets/WhiteRoseNavBar.png" alt="Rose Navigation" class="rose-stem-nav">
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="#roses">OUR ROSES</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#contact">GET IN TOUCH</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Collection Content -->
+        <section class="collection-section">
+            <div class="collection-header">
+                <p class="section-label">OUR COLLECTION</p>
+                <h2>The <span class="highlight-text">Roses</span></h2>
+                <p class="collection-description">Browse our top of the line roses,<br>cultivated at high altitudes in Ecuador.</p>
+            </div>
+
+            <div class="roses-grid" id="rosesGrid">
+                <!-- Roses will be populated here by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="roses-data.js"></script>
+    <script>
+        // Populate roses grid
+        const rosesGrid = document.getElementById('rosesGrid');
+        
+        roses.forEach(rose => {
+            const roseCard = document.createElement('div');
+            roseCard.className = 'rose-card';
+            roseCard.innerHTML = `
+                <img src="${rose.image}" alt="${rose.name}" class="rose-image">
+                <h3 class="rose-name">${rose.name}</h3>
+                <p class="rose-label">${rose.label}</p>
+            `;
+            rosesGrid.appendChild(roseCard);
+        });
+    </script>
+</body>
+</html>

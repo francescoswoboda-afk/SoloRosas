@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Rosas - Premium Roses from Ecuador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-content">
+            <div class="home-left">
+                <h1 class="brand-name">S<br>O<br>L<br>O<br><br>R<br>O<br>S<br>A<br>S</h1>
+            </div>
+            
+            <div class="home-center">
+                <img src="assets/WhiteRose.png" alt="Solo Rosas Premium White Rose" class="home-rose">
+            </div>
+            
+            <div class="home-right">
+                <nav class="home-nav">
+                    <a href="#collection" class="nav-link">OUR COLLECTION</a>
+                    <a href="#about" class="nav-link">WHO WE ARE</a>
+                    <a href="#contact" class="nav-link">GET IN TOUCH</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple navigation
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#collection') {
+                    window.location.href = 'collection.html';
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
